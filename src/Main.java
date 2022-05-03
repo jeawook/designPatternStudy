@@ -1,3 +1,4 @@
+import byJins.abstractFactory.*;
 import byJins.adapter.ILedFramework;
 import byJins.adapter.LedFrameworkAdapter;
 import byJins.strategy.MergeSort;
@@ -65,14 +66,32 @@ public class Main {
         /**
          * 어댑터 패턴
          */
-        ILedFramework led = new LedFrameworkAdapter();
+        /*ILedFramework led = new LedFrameworkAdapter();
 
         led.ledOn("RED");
         led.ledOn("BLUE");
         led.ledOn("GREEN");
 
-        led.ledBlink("RED");
+        led.ledBlink("RED");*/
 
+        /**
+         * 추상 팩토리 패턴
+         */
+        AbstractFactory af;
+        af = new KoreaFactory();
+        HamProduct ham;
+        BreadProduct bread;
+
+        bread = af.createBread();
+        ham = af.createHam();
+        ham.fromTaste();
+        bread.fromTaste();
+
+        af = new StateFactory();
+        bread = af.createBread();
+        ham = af.createHam();
+        ham.fromTaste();
+        bread.fromTaste();
 
 
     }
