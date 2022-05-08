@@ -1,6 +1,11 @@
 package headFirst.duck;
 
-public class RedHeadDuck extends Duck implements Flyable, QuackaBle{
+public class RedHeadDuck extends Duck {
+    public RedHeadDuck() {
+        flyBehavior = new FlyWithWings();
+        quackBehavior = new Quack();
+    }
+
     @Override
     public void display() {
         System.out.println("RedheadDuck");

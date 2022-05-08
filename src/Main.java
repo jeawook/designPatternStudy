@@ -5,24 +5,30 @@ import byJins.strategy.MergeSort;
 import byJins.strategy.QuickSort;
 import byJins.strategy.Sort;
 import byJins.strategy.SortEngine;
-import headFirst.duck.DecoyDuck;
-import headFirst.duck.MallardDuck;
-import headFirst.duck.RubberDuck;
+import headFirst.duck.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-        MallardDuck mallardDuck = new MallardDuck();
-        mallardDuck.quack();
-
-        RubberDuck rubberDuck = new RubberDuck();
-        rubberDuck.display();
-        rubberDuck.quack();
-
+        Duck modelDuck = new ModelDuck();
+        modelDuck.display();
+        modelDuck.performFly();
+        modelDuck.performQuack();
+        modelDuck.setFlyBehavior(new FlyRocketPower());
+        modelDuck.performFly();
+        /*MallardDuck mallardDuck = new MallardDuck();
+        mallardDuck.display();
+        mallardDuck.performQuack();
+        mallardDuck.performFly();
         DecoyDuck decoyDuck = new DecoyDuck();
         decoyDuck.display();
+        decoyDuck.performFly();
+        decoyDuck.performQuack();
+        RubberDuck rubberDuck = new RubberDuck();
+        rubberDuck.display();
+        rubberDuck.performFly();
+        rubberDuck.performQuack();*/
         /**
          * 싱글톤 패턴
          */

@@ -1,12 +1,30 @@
 package headFirst.duck;
 
-public class Duck {
+public abstract class Duck {
+
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
+
+    public Duck() {
+    }
+
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 
     public void swim() {
         System.out.println("swim");
     }
-    public void display() {
-        System.out.println("duck");
-    }
+    public abstract void display();
 
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+    public void performFly() {
+        flyBehavior.fly();
+    }
 }
