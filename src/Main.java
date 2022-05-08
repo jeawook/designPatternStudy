@@ -5,11 +5,15 @@ import byJins.strategy.MergeSort;
 import byJins.strategy.QuickSort;
 import byJins.strategy.Sort;
 import byJins.strategy.SortEngine;
+import headFirst.duck.MallardDuck;
 
 public class Main {
 
     public static void main(String[] args) {
 
+
+        MallardDuck mallardDuck = new MallardDuck();
+        mallardDuck.quack();
         /**
          * 싱글톤 패턴
          */
@@ -77,7 +81,7 @@ public class Main {
         /**
          * 추상 팩토리 패턴
          */
-        AbstractFactory af;
+        /*AbstractFactory af;
         af = new KoreaFactory();
         HamProduct ham;
         BreadProduct bread;
@@ -92,7 +96,7 @@ public class Main {
         ham = af.createHam();
         ham.fromTaste();
         bread.fromTaste();
-
+*/
 
     }
 }
