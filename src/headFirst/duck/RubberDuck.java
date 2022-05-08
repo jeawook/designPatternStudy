@@ -1,18 +1,10 @@
 package headFirst.duck;
 
-public class RubberDuck extends Duck {
+public class RubberDuck extends Duck  implements QuackaBle{
 
     @Override
     public void display() {
         System.out.println("RubberDuck");
     }
 
-    @Override
-    public void fly() {
-    }
-
-    @Override
-    public void quack() {
-
-    }
 }

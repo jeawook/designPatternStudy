@@ -5,7 +5,9 @@ import byJins.strategy.MergeSort;
 import byJins.strategy.QuickSort;
 import byJins.strategy.Sort;
 import byJins.strategy.SortEngine;
+import headFirst.duck.DecoyDuck;
 import headFirst.duck.MallardDuck;
+import headFirst.duck.RubberDuck;
 
 public class Main {
 
@@ -14,6 +16,13 @@ public class Main {
 
         MallardDuck mallardDuck = new MallardDuck();
         mallardDuck.quack();
+
+        RubberDuck rubberDuck = new RubberDuck();
+        rubberDuck.display();
+        rubberDuck.quack();
+
+        DecoyDuck decoyDuck = new DecoyDuck();
+        decoyDuck.display();
         /**
          * 싱글톤 패턴
          */
