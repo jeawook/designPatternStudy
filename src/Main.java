@@ -1,24 +1,7 @@
-import byJins.abstractFactory.*;
-import byJins.adapter.ILedFramework;
-import byJins.adapter.LedFrameworkAdapter;
-import byJins.strategy.MergeSort;
-import byJins.strategy.QuickSort;
-import byJins.strategy.Sort;
-import byJins.strategy.SortEngine;
-import headFirst.duck.*;
-import headFirst.weather.CurrentConditionsDisplay;
-import headFirst.weather.WeatherData;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        WeatherData weatherData = new WeatherData();
-        CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
-
-        weatherData.setMeasurements(80, 65, 30.f);
-        weatherData.setMeasurements(82, 70, 29.2f);
-        weatherData.setMeasurements(78, 90, 29.2f);
         /*Duck modelDuck = new ModelDuck();
         modelDuck.display();
         modelDuck.performFly();
