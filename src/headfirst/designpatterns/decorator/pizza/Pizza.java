@@ -9,6 +9,8 @@ public abstract class Pizza {
 	String dough;
 	String sauce;
 	List<String> toppings = new ArrayList<>();
+	String description;
+	double cost;
 	void prepare() {
 		System.out.println("준비중 : " + name);
 		System.out.println("도우를 돌리는 중....");
@@ -29,5 +31,8 @@ public abstract class Pizza {
 	}
 	public String getName() {
 		return name;
+	}
+	public String getDescription(){
+		return description;
 	}
 }

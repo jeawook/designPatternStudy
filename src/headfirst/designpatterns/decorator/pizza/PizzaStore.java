@@ -1,14 +1,20 @@
 package headfirst.designpatterns.decorator.pizza;
 
-public class PizzaStore {
+public abstract class PizzaStore {
  
-	public static void main(String args[]) {
-		Pizza pizza = new ThincrustPizza();
-		Pizza cheesePizza = new Cheese(pizza);
-		Pizza greekPizza = new Olives(cheesePizza);
 
-		System.out.println(greekPizza.getDescription() 
-				+ " $" + greekPizza.cost());
+	public Pizza orderPizza(String type) {
+		Pizza pizza;
 
+		pizza = createPizza(type);
+
+		pizza.prepare();
+		pizza.bake();
+		pizza.cut();
+		pizza.box();
+
+		return pizza;
 	}
+
+	protected abstract Pizza createPizza(String type);
 }

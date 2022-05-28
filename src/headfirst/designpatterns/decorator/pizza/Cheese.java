@@ -11,7 +11,4 @@ public class Cheese extends ToppingDecorator {
 		return pizza.getDescription() + ", Cheese";
 	}
  
-	public double cost() {
-		return pizza.cost(); // cheese is free
-	}
 }
